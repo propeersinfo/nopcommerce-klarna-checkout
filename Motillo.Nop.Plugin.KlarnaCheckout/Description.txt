@@ -1,0 +1,8 @@
+﻿Group: Payment methods
+FriendlyName: Klarna Checkout
+SystemName: Motillo.KlarnaCheckout
+Version: 1.0.2-beta.2
+SupportedVersions: 3.50
+Author: Propeers Team
+DisplayOrder: 1
+FileName: Motillo.Nop.Plugin.KlarnaCheckout.dll

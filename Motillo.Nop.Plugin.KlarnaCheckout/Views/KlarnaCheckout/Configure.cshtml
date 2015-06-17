@@ -1,0 +1,149 @@
+﻿@{
+    Layout = "";
+}
+@model Motillo.Nop.Plugin.KlarnaCheckout.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+
+<h2>Klarna Checkout <small>(by Motillo AB)</small></h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm())
+{
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.EId):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.EId)
+                @Html.ValidationMessageFor(x => x.EId)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.SharedSecret):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.SharedSecret)
+                @Html.ValidationMessageFor(x => x.SharedSecret)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.EnabledCountries):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.EnabledCountries)
+                @Html.ValidationMessageFor(x => x.EnabledCountries)
+                <div>@T("Motillo.Plugin.KlarnaCheckout.Settings.EnabledCountries.Hint")</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.CheckoutUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.CheckoutUrl)
+                @Html.ValidationMessageFor(x => x.CheckoutUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.TermsUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.TermsUrl)
+                @Html.ValidationMessageFor(x => x.TermsUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.DisableAutofocus):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.DisableAutofocus)
+                @Html.ValidationMessageFor(x => x.DisableAutofocus)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.AllowSeparateShippingAddress):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.AllowSeparateShippingAddress)
+                @Html.ValidationMessageFor(x => x.AllowSeparateShippingAddress)
+                <div>@T("Motillo.Plugin.KlarnaCheckout.Settings.AllowSeparateShippingAddress.Hint")</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.TestMode):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.TestMode)
+                @Html.ValidationMessageFor(x => x.TestMode)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.ColorButton):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.ColorButton)
+                @Html.ValidationMessageFor(x => x.ColorButton)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.ColorButtonText):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.ColorButtonText)
+                @Html.ValidationMessageFor(x => x.ColorButtonText)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.ColorCheckbox):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.ColorCheckbox)
+                @Html.ValidationMessageFor(x => x.ColorCheckbox)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.ColorCheckboxCheckmark):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.ColorCheckboxCheckmark)
+                @Html.ValidationMessageFor(x => x.ColorCheckboxCheckmark)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.ColorHeader):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.ColorHeader)
+                @Html.ValidationMessageFor(x => x.ColorHeader)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(x => x.ColorLink):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(x => x.ColorLink)
+                @Html.ValidationMessageFor(x => x.ColorLink)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="100%">
+                <input type="submit" name="save" class="t-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+}

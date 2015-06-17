@@ -1,0 +1,10 @@
+﻿@{
+    Layout = null;
+}
+
+<p>@T("Motillo.Plugin.KlarnaCheckout.Text.RenderingError") </p>
+
+@if (ViewBag.StatusCode == 401)
+{
+    <p>@T("Motillo.Plugin.KlarnaCheckout.Text.Unauthorized")</p>
+}
