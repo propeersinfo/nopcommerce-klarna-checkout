@@ -9,7 +9,7 @@
     Works with the "Google Analytics or Universal Analytics" widget.
 
 <h3>Premium Support:</h3>
-Need help? Our Premium Support will get you up and running in no time. Contact us for pricing and more information by dropping an email to info@propeersinfo.com.
+Need help? Our Premium Support will get you up and running in no time. Contact us for pricing and more information by dropping an email to sales@propeersinfo.com.
 
 <h3>Installation:</h3>
 Installation can be done either from the precompiled package or directly from source. The easiest way is to use the package.
