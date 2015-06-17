@@ -1,6 +1,6 @@
 <h2>Klanra Checkout plugin for nop commerce 3.60 by Professionals Peers Info Services Pvt. Ltd.</h2>
 
-Features:
+<h3>Features:</h3>
 
     Implemented as a nopCommerce payment method.
     Test/live mode.
@@ -8,10 +8,10 @@ Features:
     Automatic activation of the Klarna order when the nop order is marked as shipped.
     Works with the "Google Analytics or Universal Analytics" widget.
 
-Premium Support:
+<h3>Premium Support:</h3>
 Need help? Our Premium Support will get you up and running in no time. Contact us for pricing and more information by dropping an email to info@propeersinfo.com.
 
-Installation:
+<h3>Installation:</h3>
 Installation can be done either from the precompiled package or directly from source. The easiest way is to use the package.
 
 After installation, make sure to edit the Checkout/Completed.cshtml view so that the Klarna confirmation snippet is shown.
@@ -23,12 +23,12 @@ After installation, make sure to edit the Checkout/Completed.cshtml view so that
     </div>
 }
 
-From Package
+<h3>From Package</h3>
     Download zip.
     Unzip the content into the Plugins folder.
     Install and configure the plugin through nopCommerce's administration interface.
 
-From Source
+<h3>From Source</h3>
     Clone the repository
     Make a link from the cloned src directory to the Plugins folder in your nop project.
         Open a command prompt (admin privileges might be required)
@@ -42,4 +42,4 @@ Important Notes
 
 This plugin was created for a specific case where the Klarna Checkout snippet is rendered directly inside the payment info area, which means that the customer won't be redirected to a specific payment page. Therefor nop's ordinary "Complete Payment" button needs to be disabled/hidden when using the plugin, since Klarna has its own "Complete Payment" button. Otherwise you will end up with an unpaid order.
 
-This plugin is inspired by Klarna Checkout by Majako. The Updates features are implemented by Professionals Peers Info Services Pvt. Ltd. http://www.propeersinfo.com
+This plugin is inspired by Klarna Checkout by Majako. The Updates features are implemented by <b>Professionals Peers Info Services Pvt. Ltd. http://www.propeersinfo.com</b>
