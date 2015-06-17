@@ -1,4 +1,4 @@
-Klanra Checkout plugin for nop commerce 3.60 by Professionals Peers Info Services Pvt. Ltd.
+<h1>Klanra Checkout plugin for nop commerce 3.60 by Professionals Peers Info Services Pvt. Ltd.</h1>
 
 Features:
 
