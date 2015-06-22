@@ -1,6 +1,6 @@
 <h2>Klanra Checkout plugin(developed by Motillo) upgraded to nop commerce 3.60 by Professionals Peers Info Services Pvt. Ltd.</h2>
 
-Original Code of  https://github.com/Motillo/klarna-checkout-nopcommerce developed by Motillo.
+Original Code of  https://github.com/Motillo/klarna-checkout-nopcommerce was developed by Motillo.
 
 <h3>Support:</h3>
 Our Support team can help you at any time. You can contact us for more information by dropping an email to sales@propeersinfo.com.
