@@ -7,7 +7,7 @@ Our Support team can help you at any time. You can contact us for more informati
 
 To Support Nop Commerce 3.6 version following changes are done:
 
-1)References are updated to latest version.
+1) References are updated to latest version.
 2) Changes are done in KlarnaCheckoutContext.cs
 
 This plugin is inspired by Klarna Checkout by Majako and Motillo. The Upgradation features are implemented by <b>Professionals Peers Info Services Pvt. Ltd. http://www.propeersinfo.com</b>
