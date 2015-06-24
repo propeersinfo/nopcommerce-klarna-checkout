@@ -11,6 +11,7 @@
 
 @using (Html.BeginForm())
 {
+	@Html.AntiForgeryToken()
     <table class="adminContent">
         <tr>
             <td class="adminTitle">

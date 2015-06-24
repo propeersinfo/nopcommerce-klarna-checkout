@@ -115,6 +115,7 @@ namespace Motillo.Nop.Plugin.KlarnaCheckout.Controllers
         [HttpPost]
         [AdminAuthorize]
         [ChildActionOnly]
+		  [ValidateAntiForgeryToken]// PPIS
         public ActionResult Configure(ConfigurationModel model)
         {
             if (!ModelState.IsValid)

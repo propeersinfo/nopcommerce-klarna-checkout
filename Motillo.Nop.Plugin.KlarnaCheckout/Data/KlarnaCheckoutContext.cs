@@ -12,22 +12,44 @@ namespace Motillo.Nop.Plugin.KlarnaCheckout.Data
     {
         public const string TableName = "Motillo_KlarnaCheckout";
 
-        public KlarnaCheckoutContext(string nameOrConnectionString) : base(nameOrConnectionString)
+		  #region Ctor
+		  public KlarnaCheckoutContext(string nameOrConnectionString) : base(nameOrConnectionString)
         {
-            Database.SetInitializer<KlarnaCheckoutContext>(null);
+			  // PPIS
+           // Database.SetInitializer<KlarnaCheckoutContext>(null);
         }
+		  #endregion
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+
+		  #region Utilities
+		  protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new KlarnaCheckoutEntityConfiguration());
-
+				//disable EdmMetadata generation
+				//modelBuilder.Conventions.Remove<IncludeMetadataConvention>();
             base.OnModelCreating(modelBuilder);
         }
 
-        public string CreateDatabaseInstallationScript()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.CreateDatabaseScript();
-        }
+		  #endregion
+
+		  #region Methods
+
+		  public string CreateDatabaseInstallationScript()
+		  {
+			  return ((IObjectContextAdapter)this).ObjectContext.CreateDatabaseScript();
+		  }
+
+		  //public IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
+		  //{
+		  //	return base.Set<TEntity>();
+		  //}
+
+		  //PPIS
+		  public new IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
+		  {
+			  return base.Set<TEntity>();
+		  }
+		  
 
         public void Install()
         {
@@ -45,10 +67,7 @@ namespace Motillo.Nop.Plugin.KlarnaCheckout.Data
             SaveChanges();
         }
 
-        public IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
-        {
-            return base.Set<TEntity>();
-        }
+		 
 
         public IList<TEntity> ExecuteStoredProcedureList<TEntity>(string commandText, params object[] parameters) where TEntity : BaseEntity, new()
         {
@@ -69,5 +88,53 @@ namespace Motillo.Nop.Plugin.KlarnaCheckout.Data
         {
             throw new NotSupportedException();
         }
+
+		  //PPIS
+		  /// <summary>
+		  /// Detach an entity
+		  /// </summary>
+		  /// <param name="entity">Entity</param>
+		  public void Detach(object entity)
+		  {
+			  if (entity == null)
+				  throw new ArgumentNullException("entity");
+
+			  ((IObjectContextAdapter)this).ObjectContext.Detach(entity);
+		  }
+		  #endregion
+		  // PPIS
+		  #region Properties
+
+		  /// <summary>
+		  /// Gets or sets a value indicating whether proxy creation setting is enabled (used in EF)
+		  /// </summary>
+		  public virtual bool ProxyCreationEnabled
+		  {
+			  get
+			  {
+				  return this.Configuration.ProxyCreationEnabled;
+			  }
+			  set
+			  {
+				  this.Configuration.ProxyCreationEnabled = value;
+			  }
+		  }
+
+		  /// <summary>
+		  /// Gets or sets a value indicating whether auto detect changes setting is enabled (used in EF)
+		  /// </summary>
+		  public virtual bool AutoDetectChangesEnabled
+		  {
+			  get
+			  {
+				  return this.Configuration.AutoDetectChangesEnabled;
+			  }
+			  set
+			  {
+				  this.Configuration.AutoDetectChangesEnabled = value;
+			  }
+		  }
+
+		  #endregion
     }
 }
